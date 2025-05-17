@@ -13,7 +13,6 @@ function App() {
     <>
       <Navbar />
       <ItemListContainer greeting={'Sleep Token Shop'} />
-      <ItemCount stock={15} />
       <ItemDetailContainer />
     </>
   )
