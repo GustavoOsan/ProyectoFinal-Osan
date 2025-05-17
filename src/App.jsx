@@ -1,7 +1,8 @@
 import './App.css'
 import ItemCount from './components/ItemCount'
 import ItemListContainer from './components/ItemListContainer'
-import Navbar from './components/Navbar'  
+import Navbar from './components/Navbar'
+import ItemDetailContainer from './components/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -10,9 +11,10 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <ItemListContainer greeting={'Sleep Token Shop'}/>
-      <ItemCount stock={15}/>
+      <Navbar />
+      <ItemListContainer greeting={'Sleep Token Shop'} />
+      <ItemCount stock={15} />
+      <ItemDetailContainer />
     </>
   )
 }

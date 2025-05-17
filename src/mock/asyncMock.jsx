@@ -23,9 +23,20 @@ export const getProducts = () => {
         setTimeout(() => {
             if (!error) {
                 resolve(data)
-            }else {
+            } else {
                 reject('Hubo un error');
             }
         }, 2000);
+    })
+}
+
+
+export const getItem = (id) => {
+
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            let product = data.find((item) => item.id === parseInt(id));
+            resolve(product)
+        }, 2000)
     })
 }
