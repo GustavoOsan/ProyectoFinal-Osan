@@ -8,7 +8,7 @@ const Item = ({prod}) => {
         <div className='card-body'>
             <h5 className='card-title'>{title}</h5>
             <p className='card-text'>$ {price},00</p>
-            <a href="" className='btn btn-dark'>Ver Mas</a>
+            <a href="" className='btn btn-dark'>Ver Más</a>
         </div>
     </div>
   )
