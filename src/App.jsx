@@ -1,21 +1,25 @@
 import './App.css'
-import ItemCount from './components/ItemCount'
 import ItemListContainer from './components/ItemListContainer'
-import Navbar from './components/Navbar'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarReactBootstrap from './components/NavbarReactBootstrap'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
-  console.log('App')
-
   return (
-    <>
+    <BrowserRouter>
       <NavbarReactBootstrap />
-      <ItemListContainer greeting={'Sleep Token Shop'} />
-      <ItemDetailContainer />
-    </>
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting='Sleep Token Shop' />} />
+        <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+
+        <Route path='/category' element={<ItemListContainer greeting='Sleep Token Shop' />} />
+      </Routes>
+
+
+
+    </BrowserRouter>
   )
 }
 
