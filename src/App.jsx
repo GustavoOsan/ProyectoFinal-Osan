@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemListContainer greeting='Sleep Token Shop' />} />
         <Route path='/item/:itemId' element={<ItemDetailContainer />} />
-
+        <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria: ' />} />
         <Route path='/category' element={<ItemListContainer greeting='Sleep Token Shop' />} />
       </Routes>
 
