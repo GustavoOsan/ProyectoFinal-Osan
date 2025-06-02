@@ -3,15 +3,18 @@ import { getProducts } from '../mock/asyncMock'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import { SiPanasonic } from 'react-icons/si'
+import { getDocs } from 'firebase/firestore'
+import LoaderComponent from './LoaderComponent'
 
 const ItemListContainer = ({ greeting }) => {
 
 
     const [products, setProducts] = useState([])
-    const {categoryId} = useParams()
-
+    const [loading, setLoading] = useState(false)
+    const { categoryId } = useParams()
 
     useEffect(() => {
+        setLoading(true)
         getProducts()
             .then((res) => {
                 if (categoryId) {
@@ -20,16 +23,21 @@ const ItemListContainer = ({ greeting }) => {
                     setProducts(res)
                 }
             })
-            .catch((error) => { console.error(error) })
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false))
     }, [categoryId])
-    console.log(products)
 
     return (
-        <div>
-            <h1 className="text-success" >{greeting}{categoryId&& <span>{categoryId}</span>}</h1>
-            <ItemList products={products} />
-        </div>
+        <>
+            { loading
+                ? <LoaderComponent/>
+                : <div>
+                    <h1 className="text-success">{greeting}{categoryId && <span>{categoryId}</span>}</h1>
+                    <ItemList products={products} />
+                </div>
+            }
+        </>
     )
 }
 
-export default ItemListContainer;
+export default ItemListContainer
