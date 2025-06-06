@@ -45,4 +45,4 @@ Gustavo C. Osan
 
 
 ### 📖 Licencia
-Este proyecto no tiene una licencia específica asignada. Se puede adaptar si se necesita más adelante.
+Este proyecto no tiene una licencia específica asignada. Se puede adaptar si se necesita más adelante.# ProyectoFinal-Osan
