@@ -3,8 +3,10 @@ import { getProducts } from '../mock/asyncMock'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import { SiPanasonic } from 'react-icons/si'
-import { getDocs } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../service/firebase'
 import LoaderComponent from './LoaderComponent'
+
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -13,18 +15,21 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(false)
     const { categoryId } = useParams()
 
+
     useEffect(() => {
         setLoading(true)
-        getProducts()
-            .then((res) => {
-                if (categoryId) {
-                    setProducts(res.filter((prod) => prod.category === categoryId))
-                } else {
-                    setProducts(res)
+        const productsCollection = categoryId ? query(collection(db, "productos"), where("category","==",categoryId)) : collection(db, "productos")
+        getDocs(productsCollection)
+        .then((res) => { 
+            const list = res.docs.map((doc) => {
+                return { 
+                    id: doc.id, ...doc.data() 
                 }
             })
-            .catch((error) => console.error(error))
-            .finally(() => setLoading(false))
+            setProducts(list)
+        })
+        .catch(error => console.error(error))
+        .finally(() => setLoading(false))
     }, [categoryId])
 
     return (

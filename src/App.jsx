@@ -6,6 +6,8 @@ import NavbarReactBootstrap from './components/NavbarReactBootstrap'
 import NotFound from './components/NotFound'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {CartProvider}from './context/CartContext';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetailContainer />} />
         <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria: ' />} />
         <Route path='/category' element={<ItemListContainer greeting='Sleep Token Shop' />} />
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/checkout' element={<Checkout/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       </CartProvider>

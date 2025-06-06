@@ -10,7 +10,7 @@ const ItemCount = ({ stock, onAdd }) => {
     }
 
     const restar = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1)
         }
     }
@@ -21,9 +21,9 @@ const ItemCount = ({ stock, onAdd }) => {
 
     return (
         <div>
-            <div>
-                <button className='btn btn-danger' onClick={restar}>-</button>
-                <span className='btn'>{count}</span>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+                <button className='btn btn-danger'onClick={restar}>-</button>
+                <span style={{padding: '1rem'}} className='btn'>{count}</span>
                 <button className='btn btn-success' onClick={sumar}>+</button>
             </div>
             <button className='btn btn-primary'onClick={comprar}>Agregar al carrito</button>

@@ -1,10 +1,18 @@
+import React, { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+
+import EmptyCart from './emptyCart'
+import CartView from './CartView'
+
+
 const Cart = () => {
+    const {cart} = useContext(CartContext)
     return (
         <div>
-            <span>🛒5</span>
+            {cart.length ? <CartView/>:<EmptyCart/>}
         </div>
     )
 
 }
 
-export default Cart;
+export default Cart

@@ -13,16 +13,16 @@ const ItemDetail = ({ detail }) => {
     setPurchase(true)
   }
   return (
-    <div style={{ display: 'flex', justifyContent: 'Center', flexDirection: 'column', alignItems: 'center', marginTop: '10px' }}>
+    <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', width:'100%', padding:'2rem'}}>
       <h1>Detalle del Producto: {detail.title}</h1>
-      <img src={detail.img} alt={detail.title} />
+      <img style={{height: '30rem'}} src={detail.img} alt={detail.title} />
       <p>Descripcion: {detail.description}</p>
       <p>Precio: $ {detail.price},00</p>
       <p>Stock: {detail.stock} unidades</p>
 
       {
         purchase
-          ? <div style={{ display: 'flex', width: '30%', justifyContent: 'space-between', alignItems: 'center' }}>
+          ? <div style={{ display: 'flex', width: '80%', justifyContent: 'space-between', alignItems: 'center'}}>
             <Link className='btn btn-dark' to='/'>Seguir Comprando</Link>
             <Link className='btn btn-dark' to='/cart'>Terminar Compra</Link>
           </div>
