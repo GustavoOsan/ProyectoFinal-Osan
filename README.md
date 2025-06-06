@@ -34,7 +34,7 @@ npm run dev
 
 
 ## 🖼️ Captura de pantalla
-![image]()
+![image](/public/img-readme.jpg)
 
 
 ✨ Características principales
