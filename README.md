@@ -32,6 +32,8 @@ npm install
 3. Iniciá el servidor de desarrollo:
 npm run dev
 
+## 🖥 Version Host 
+Para ver el proyecto online ingresa aqui: [Sleep Token App](https://proyecto-final-osan-4hgk.vercel.app/)
 
 ## 🖼️ Captura de pantalla
 ![image](/public/img-readme.jpg)
