@@ -19,7 +19,6 @@ Este proyecto es una tienda online inspirada en la banda Sleep Token. La platafo
 ## ⚙️ Instalación
 
 1. Cloná este repositorio:
-   ```bash
    git clone https://github.com/tu-usuario/sleep-token-shop.git
    cd sleep-token-shop
 
@@ -31,7 +30,7 @@ npm run dev
 
 
 ## 🖼️ Captura de pantalla
-![image]
+![image]()
 
 
 ✨ Características principales
