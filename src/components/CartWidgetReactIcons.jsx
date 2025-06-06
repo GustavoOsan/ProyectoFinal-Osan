@@ -7,8 +7,8 @@ const CartWidgetReactIcons = () => {
     const{cartQuantity}=useContext(CartContext)
     return(
         <div>
-            <Badge bg="danger">{cartQuantity()}</Badge>
-            <BsCart4 fontSize={'1.8rem'} />
+            {cartQuantity() >0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+            <BsCart4 fontSize={'2rem'} />
         </div>
     )
 }

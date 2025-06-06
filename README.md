@@ -8,18 +8,22 @@ Este proyecto es una tienda online inspirada en la banda Sleep Token. La platafo
 
 ## 🚀 Tecnologías utilizadas
 
-- [React](https://reactjs.org/) 
-- [React DOM](https://reactjs.org/docs/react-dom.html)
-- [React Router DOM](https://reactrouter.com/) 
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [React Spinners](https://www.davidhu.io/react-spinners/)
-- [React Bootstrap](https://react-bootstrap.github.io/)
-- [Firebase](https://firebase.google.com/)
+A continuación se detallan las herramientas y librerías usadas, junto a su propósito dentro del proyecto:
+
+| Tecnología             | Versión     | Utilidad                                                                  |
+|------------------------|-------------|---------------------------------------------------------------------------|
+| **React**              | ^19.0.0     | Framework principal para construir la interfaz de usuario.                |
+| **React DOM**          | ^19.0.0     | Permite renderizar componentes React en el DOM del navegador.             |
+| **React Router DOM**   | ^7.6.0      | Navegación entre páginas y rutas sin recargar el sitio.                   |
+| **React Icons**        | ^5.5.0      | Íconos SVG fácilmente integrables en los componentes.                     |
+| **React Spinners**     | ^0.17.0     | Indicadores visuales de carga con animaciones.                            |
+| **React Bootstrap**    | ^2.10.10    | Componentes visuales con estilo Bootstrap en formato React.               |
+| **Firebase**           | ^11.8.1     | Backend como servicio: base de datos, autenticación, almacenamiento.      |
+| **sweetAlert2**        | ^11.22.0    | Servicio de Alertas                                                       |
 
 ## ⚙️ Instalación
-
 1. Cloná este repositorio:
-   git clone https://github.com/tu-usuario/sleep-token-shop.git
+   git clone https://github.com/GustavoOsan/ProyectoFinal-Osan.git
    cd sleep-token-shop
 
 2. Instalá las dependencias:
@@ -45,4 +49,4 @@ Gustavo C. Osan
 
 
 ### 📖 Licencia
-Este proyecto no tiene una licencia específica asignada. Se puede adaptar si se necesita más adelante.# ProyectoFinal-Osan
+Este proyecto no tiene una licencia específica asignada. Se puede adaptar si se necesita más adelante.
